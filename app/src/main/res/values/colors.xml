@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="wp_light_green">#19ab60</color>
+    <color name="wp_dark_green">#008169</color>
+    <color name="meta_blue">#0082fb</color>
 </resources>
