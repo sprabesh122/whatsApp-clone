@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -46,7 +48,7 @@ fun WelcomeScreenComposable() {
                 withStyle(
                     style = SpanStyle(
                         color = colorResource(R.color.wp_light_green),
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Normal
                     )
                 ) {
                     append("Privacy Policy")
@@ -57,7 +59,7 @@ fun WelcomeScreenComposable() {
                 withStyle(
                     style = SpanStyle(
                         color = colorResource(R.color.wp_light_green),
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Normal
                     )
                 ) {
                     append("Terms and Service")
@@ -66,7 +68,20 @@ fun WelcomeScreenComposable() {
             textAlign = TextAlign.Center,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp)
+                .padding(horizontal = 20.dp, vertical = 4.dp)
         )
+
+        Button(
+            onClick = { /*TODO*/ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 64.dp, vertical = 8.dp),
+            shape = RoundedCornerShape(4.dp),
+            colors = androidx.compose.material3.ButtonDefaults.buttonColors(
+                containerColor = colorResource(R.color.wp_dark_green)
+            )
+        ) {
+            Text(text = "Agree and continue", fontSize = 16.sp)
+        }
     }
 }
